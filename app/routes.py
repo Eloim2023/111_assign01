@@ -13,13 +13,3 @@ def index():
         "is_active": True
 }
     return me
-
-@app.post("/")
-def create_entry():
-    raw_data = request.json
-    mylist.append(raw_data)
-    return "", 204
-
-@app.get("/entries")
-def get_entries():
-    return mylist
